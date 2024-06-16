@@ -1,0 +1,6 @@
+## all directories listed here will be backed-up
+## one directory per line
+
+/home/harvald/.config/
+/home/harvald/.ssh/
+/var/leHDD/work/
