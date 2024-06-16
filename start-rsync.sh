@@ -17,7 +17,7 @@ if ! rsync --version; then
 fi
 
 ssh $remoteServer "mkdir -p $destinationFolder/$computer/"
-# checks directories.txt and backups each directory listed
+# iterate through each line within directory.txt
 while IFS= read -r file
 do
 	## check if line is empty or commented, if so, skip it
