@@ -3,13 +3,14 @@
 # Author: harvald
 #
 ## This script automatically backup desired files to an rsync remote location
+#
+# Change remote server and destination folder here.
+remoteServer="exposedlan@192.168.1.138"
+destinationFolder="/mnt/backups"
 
 in="$(pwd)/directories.txt"
 sshKey="/bin/ssh -i '$HOME'/.ssh/id_rsa" # Add -p <port> to change port
 computer=$(hostnamectl hostname)
-# Change remote server and destination folder.
-remoteServer="exposedlan@192.168.1.138"
-destinationFolder="/mnt/backups"
 
 # checks if rsync is installed
 if ! rsync --version; then
